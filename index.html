@@ -1,55 +1,82 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>Code Quiz</title>
+    <!-- <link rel="stylesheet" href="../assets/css/reset.css"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <div class="home-page">
-        <!--THIS IS THE INTRO PAGE TO THE QUIZ-->
-        <div class="header">
-            <div class="view-highscore">
-                <h2>View high scores</h2>
+    <div class="first-page">
+        <!---div that will contain the form of questionnaire page-->
+        <div class="row header">
+            <div class="col-md-10 col-sm-6">
+                <h5 id="h-score">View HighScore</h5>
             </div>
-            <div class="timer">
-                <h2>Time: </h2>
+            <div class="col-md-2 col-sm-6">
+                <h5 id="time">Time: 0 </h5>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="wrapper">
+            <div class=" row ">
+                <div class="col-md-10 col-sm-6">
+                    <h2>Coding Quiz Challenge</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-sm-6">
+                    <p>Try to answer the following code-related questions within the limit.
+                        Keep in mind that incorrect answers will penalize your score
+                        time by 15 seconds</p>
+
+                    <button id="start" class="btn btn-primary btn-lg">Start Quiz</button>
+                </div>
             </div>
         </div>
-        <div class="quiz-intro">
-            <h2>Coding Quiz Challenge</h2>
-            <p id="instructions">Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time<br> by ten seconds!</p>
-            <button id="start" class="buttons">Start Quiz</button>
+
+
+        <!---This is begening of the  div that will contain all the questions  -->
+        <div class="divContainer">
+
+            <!---This is begening of the first div that will display each questions -->
+
+            <h3 id="title">
+
+            </h3>
+            <ol id="q-list">
+
+
+            </ol>
+
         </div>
-    </div>
+        <br>
+        <div id="response"> </div>
 
-        <!--THIS IS THE CONTAINER THAT WILL HOLD ALL THE QUESTIONS-->
-    <div class="div-container">
-        <h3 id="title">
+        <div class="finish-section">
+            <h3>All Done!</h3>
 
-        </h3>
-        <ol id="quiz-list">
-
-        </ol>
-    </div>
-    <br>
-    <div id="response"> </div>
-
-    <div class="finish">
-        <h3>All Done!</h3>
             <p id="result"> </p>
             <p id="errorSmg"></p>
 
             <form class="form-inline">
-        <div class="form-group mb-2">
-                <h5 id="staticEmail2">Enter initials </h5>
-        </div>
-        <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="inputInitial" placeholder="Enter your initials"> 
-        </div>
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                <div class="form-group mb-2">
+                    <h5 id="staticEmail2">Enter initials </h5>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="inputInitial" placeholder="Enter your initials"> </div>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
             </form>
 
         </div>
@@ -58,10 +85,17 @@
 
             <div class="col-sm-10">
                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1.">
+
             </div>
-                <button class="myBtn" onclick="init()">Go Back</button>
-                <button class="myBtn" onclick="clearScore()">Clear highScores</button>
+            <button class="myBtn" onclick="init()">Go Back</button>
+            <button class="myBtn" onclick="clearScore()">Clear highScores</button>
+
+
         </div>
-    </div>
+
+
+        
+        <script src="./assets/js/logic.js"></script>
 </body>
+
 </html>
